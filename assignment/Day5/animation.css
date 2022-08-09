@@ -46,17 +46,18 @@
     position: absolute;
     width: 320px;
     height: 150px;
-    bottom: 80px;
+    bottom: 50px;
     left: 500px;
     z-index: 3;
     animation: car 1s linear infinite;
 }
+
 .wheel1
 {
     position: absolute;
     width: 60px;
     height: 60px;
-    bottom: 90px;
+    bottom: 60px;
     left: 527px;
     z-index: 3;
     animation: wheel 2s linear infinite;
@@ -66,7 +67,7 @@
     position: absolute;
     width: 60px;
     height: 60px;
-    bottom: 90px;
+    bottom: 60px;
     left: 722px;
     z-index: 3;
     animation: wheel 2s linear infinite;
