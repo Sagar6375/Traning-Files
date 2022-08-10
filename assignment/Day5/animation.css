@@ -49,7 +49,7 @@
     bottom: 50px;
     left: 500px;
     z-index: 3;
-    animation: car 1s linear infinite;
+    //animation: car 1s linear infinite;
 }
 
 .wheel1
@@ -78,14 +78,14 @@
     }
 
 }
-@keyframes car {
+/* @keyframes car {
     0%{
         transform: translatey(0px);
 
     }
     100%{
         transform: translateY(-5px)
-    }
+    } */
 
 }
 
