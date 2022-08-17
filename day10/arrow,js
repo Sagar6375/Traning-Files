@@ -1,0 +1,52 @@
+// ES5 based fynction
+// var add=function(a,b){
+//     return a+b;
+
+// };
+//ES6 fat Arrow function
+var add=(a,b)=> a+b;
+console.log(add(5,15));
+
+
+//variation-1
+var sayhello=()=>console.log("this is variation 1");
+sayhello();
+var sqr=(a)=>console.log("result"+" "+a*a);
+sqr(5);
+
+//msp
+var user=[
+    {fn:"sagar",ln:"saini"},
+    {fn:"sagar",ln:"saini"},
+];
+var arr=user.map((u)=>{
+    return u.fn+" "+u.ln;
+})
+console.log(arr);
+//FILTER
+var age=[3,4,53,65,70];
+var result=age.filter(filterage);
+function filterage(age){
+    return age>10;
+}
+console.log(result);
+
+let cityes=[
+    {name:"sksk",age:39},
+    {name:"sksddsk",age:19},
+    {name:"skflsk",age:34},
+];
+// var big=[];
+// for(var i=0;i<cityes.length;i++){
+//     if(cityes[i].age>20)
+//      big.push(cityes[i]);
+// }
+// console.log(big);
+
+var bigc=cityes.filter((cityes)=>cityes.age>20);
+console.log(bigc);
+
+//  settimeout
+setTimeout(callback,300);
+
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black;">
+    <script>
+        var Call=function(){
+            return this.firstn+" "+this.last;
+        }
+        var person1={
+            firstn:prompt("Enter first name="),
+            last:prompt("Enter first second="),
+        };
+        //(Call.call(person1));
+        document.write('<h1 style="text-align: center; color: white;">'+"This is use the call function "+Call.call(person1)+'</h1>');
+        document.write('<h1 style="text-align: center; color: white;">'+"This is use the apply function "+Call.apply(person1)+'</h1>');
+
+        
+
+
+
+    </script>
+    
+</body>
+</html>
