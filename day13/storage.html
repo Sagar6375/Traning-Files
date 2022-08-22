@@ -1,31 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <pre>
-    <label for="">Enter user name</label> 
-    <input type="text" id="username">
-    <button id="add">store information</button>
-</pre>
-<script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo List</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="storage.css" />
+  </head>
+  <body>
+    <header>To-do List</header>
+    <form>
+      <input type="text" class="todo-input" />
+      <button>
+     <i class="fa fa-plus-square" aria-hidden="true"></i> 
     
-    var btn=document.getElementById("add");
-    console.log(btn)
-    btn.onclick=storeData;
-    function storeData(){
-        var name=document.getElementById("username");
-        console.log(name)
-        var data= name.value;
-        console.log(data);
-        window.localStorage.setItem("Info", data);
-        alert("Data store in local storage");
-    }
-</script>
-    
-</body>
+      </button>
+    </form>
+    <div class="todo-container">
+      <ul class="todo-list"></ul>
+    </div>
+
+    <script src="storage.js"></script>
+  </body>
 </html>
