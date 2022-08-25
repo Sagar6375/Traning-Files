@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <audio controls  id="Myaudio">
+        <source src="./Sevish_-__nbsp_.mp3" type="audio/mp3">
+        
+    </audio>
+    <button id="pbutton">play</button>
+    <script>
+        var myaudio=document.getElementById("Myaudio");
+        var myplay=document.getElementById("pbutton");
+        myplay.onclick=playbutton;
+        function playbutton(){
+            myaudio.play();
+            console.log(myaudio.played);
+        }
+        
+
+
+    </script>
+</body>
+</html>
