@@ -2,10 +2,10 @@ var image = document.getElementById("imgo");
 var canvas=document.getElementById("can");
 var ctx=canvas.getContext("2d");
 const player = {
-    w: 30,
-    h: 30,
-    x: 20,
-    y: 200,
+    w: 70,
+    h: 70,
+    x: 450,
+    y: 260,
     speed: 5,
     dx: 0,
     dy: 0
