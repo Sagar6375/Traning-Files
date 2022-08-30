@@ -3,7 +3,8 @@ var bg,bgImage,mario_runing,mario,ground;
 var brickImage,bricksGroup;
 var coinImage,coinGroup,jumpSound;
 var coinSound,points=0,points1=0;
-var obs,obs1;
+var obs,obsGroup;
+var deadImage;
 
 
 
@@ -15,7 +16,8 @@ function preload(){
     coinImage=loadAnimation("images/con1.png","images/con2.png","images/con3.png","images/con4.png","images/con5.png","images/con6.png",);
     coinSound=loadSound("sounds/coinSound.mp3");
     jumpSound=loadSound("sounds/jump.mp3");
-    obs=loadImage("images/dead.png");
+    deadImage=loadImage("images/dead.png");
+    obs=loadAnimation("images/mush1.png","images/mush2.png","images/mush3.png","images/mush4.png","images/mush5.png");
 }  
 //create basic scaleton with their require credentials
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -33,6 +35,7 @@ function setup(){
     bricksGroup=new Group();
     coinGroup=new Group();
    // obs1=createSprite(200,200,100,100);
+   obsGroup=new Group();
 
     
 }
@@ -91,18 +94,31 @@ function draw (){
 
         //obs1=createSprite(200,200,100,100);
         
-
-
     }
+
+ }
     // else{
     //     points=0;
     // }
     points1++;
-    
-    
-   }
-   // background("black");
+    generateobs();
+    for(var i=0;i<obsGroup.length;i++){
+        var temp=obsGroup.get(i);
+        if(temp.isTouching(mario)){
+            
+            
+        }
+    }
+
+
+
+
     drawSprites();
+    
+    
+   
+   // background("black");
+    
 
     //coin count
     textSize(20);
@@ -150,4 +166,21 @@ function generateBricks(){
     
     
 
+}
+function  generateobs()
+{
+    if(frameCount%90==0){
+       // console.log(frameCount);
+       
+       
+
+    var obs1=createSprite(900,550,30,5);
+    obs1.x=random(500,1000);
+    obs1.addAnimation("coinanimataion",obs);
+    obs1.scale=.1;
+    obs1.velocityX=-10;
+    //setTimeout(coin.velocityX+=-10,2000);
+   // console.log(coin.velocityX);
+    obsGroup.add(obs1);
+    }
 }
