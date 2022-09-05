@@ -8,7 +8,7 @@ const player = {
     y: 260,
     speed: 5,
     dx: 0,
-    dy: 0
+    dy: 0,
   };
 function drawplayer(){
     ctx.drawImage(image,player.x,player.y,player.w,player.h);
